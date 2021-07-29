@@ -8,10 +8,11 @@ class AudioPlayPosButtonsGUI(BoxLayout):
 
 class AudioPlayPosButtonsMainApp(App):
 	def build(self):
-		from audioplayposbuttons import AudioPlayPosButtons
+		# IMPORTANT:
+		# from audioplayposbuttons import AudioPlayPosButtons is not necessary
+		# if #: import AudioPlayPosButtons audioplayposbuttons.AudioPlayPosButtons
+		# is in audioplayposbuttons.kv file !
 		Builder.load_file('audioplayposbuttons.kv')
-
-		#Builder.load_file('audioplayposbuttonsmain.kv')
 
 		return AudioPlayPosButtonsGUI()
 

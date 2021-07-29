@@ -1,17 +1,21 @@
 <AudioPlayPosButtonsGUI>
-    orientation: 'vertical'
+	orientation: 'vertical'
 	GridLayout:
 		cols: 1
 		rows: 2
-		size_hint_x: 0.75
-		canvas.before:
-			Color:
-				rgb: [0,0,0]
-			Rectangle:
-				pos: self.pos
-				size: self.size
-        AudioPlayPosButtons:
-            size_hint_y: 0.08
-        GridLayout:
-            cols: 1
-            size_hint_y: 0.92
+		GridLayout:
+			cols: 3
+			rows: 1
+			size_hint_y: 0.08
+			GridLayout:
+				cols: 1
+				size_hint_x: 0.05
+			AudioPlayPosButtons:
+				size_hint_x: 0.7
+				size_hint_y: 0.08
+			GridLayout:
+				cols: 1
+				size_hint_x: 0.25
+		GridLayout:
+			cols: 1
+			size_hint_y: 0.92

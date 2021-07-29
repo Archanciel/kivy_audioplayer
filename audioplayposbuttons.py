@@ -1,9 +1,9 @@
 from kivy.app import App
 from kivy.lang import Builder
-from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.gridlayout import GridLayout
 
 
-class AudioPlayPosButtons(BoxLayout):
+class AudioPlayPosButtons(GridLayout):
 	pass
 
 if __name__ == '__main__':
