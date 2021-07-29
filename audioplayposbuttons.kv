@@ -1,0 +1,59 @@
+<AudioPlayPosButtons>
+	GridLayout:
+		cols: 1
+		rows: 1
+		canvas.before:
+			Color:
+				rgb: [0,0,0]
+			Rectangle:
+				pos: self.pos
+				size: self.size
+		GridLayout:
+			cols: 3
+			rows: 1
+			GridLayout:
+				cols: 1
+				size_hint: (0.2, 0.4)
+			GridLayout:
+				cols: 1
+				rows: 1
+				size_hint: (0.4, 0.2)
+				GridLayout:
+					cols: 1
+					rows: 2
+					size_hint: (0.4, 0.4)
+					GridLayout:
+						cols: 2
+						rows: 1
+						size_hint: (0.6, 0.2)
+						GridLayout:
+							size_hint_y: 0.15
+							cols: 4
+							Button:
+								text: '<|'
+								on_press: root.goToSharedFileStartPos()
+							Button:
+								text: '<<'
+								on_press: root.backwardSharedFileThirtySeconds()
+							Button:
+								text: '<'
+								on_press: root.backwardSharedFileTenSeconds()
+							Button:
+								id: button_play_shared_file
+								text: 'Play'
+								on_press: root.playSharedFile()
+						GridLayout:
+							cols: 4
+							size_hint_y: 0.15
+							Button:
+								text: 'Stop'
+								on_press: root.stopSharedFile()
+							Button:
+								text: '>'
+								on_press: root.forwardSharedFileTenSeconds()
+							Button:
+								text: '>>'
+								on_press: root.forwardSharedFileThirtySeconds()
+							Button:
+								text: '|>'
+								on_press: root.goToSharedFileEndPos()
