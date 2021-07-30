@@ -2,4 +2,5 @@ from audioplayposbuttons import AudioPlayPosButtons
 
 
 class AudioPlayPosFields(AudioPlayPosButtons):
-	pass
+	def __init__(self, **kw):
+		super().__init__(**kw)

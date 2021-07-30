@@ -7,15 +7,14 @@
 #: import FocusTextInput focustextinput.FocusTextInput
 
 <AudioPlayPosFields>: # inherits from AudioPlayPosButtons
+	cols: 1
 	GridLayout:
 		cols: 1
-		rows: 2
-		size_hint: (0.4, 0.4)
-
+		rows: 3
 		GridLayout:
 			cols: 3
 			rows: 2
-			size_hint: (0.4, 1)
+			size_hint: (0.4, None)
 			Label:
 				size_hint_y: 0.01
 				valign: 'bottom'
@@ -44,4 +43,13 @@
 				size_hint_y: 0.01
 				halign: 'right'
 				multiline: False
-		AudioPlayPosButtons:
+		GridLayout:
+			cols: 1
+            size_hint: (0.4, None)
+			Label:
+				valign: 'bottom'
+				text: 'Essai'
+		GridLayout:
+			cols: 1
+            size_hint: (0.4, None)
+    		AudioPlayPosButtons:
