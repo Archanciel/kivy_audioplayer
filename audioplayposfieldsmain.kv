@@ -1,0 +1,23 @@
+<AudioPlayPosFieldsGUI>
+    audioPlayPosFields: audio_play_pos_buttons
+	orientation: 'vertical'
+	GridLayout:
+		cols: 1
+		rows: 2
+		GridLayout:
+			cols: 3
+			rows: 1
+			size_hint_y: 0.08
+			GridLayout:
+				cols: 1
+				size_hint_x: 0.05
+			AudioPlayPosFields:
+			    id: audio_play_pos_buttons
+				size_hint_x: 0.7
+				size_hint_y: 0.08
+			GridLayout:
+				cols: 1
+				size_hint_x: 0.25
+		GridLayout:
+			cols: 1
+			size_hint_y: 0.92

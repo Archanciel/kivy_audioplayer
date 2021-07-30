@@ -1,0 +1,47 @@
+# ---------- audioplayposfields.kv  ----------
+
+
+# Next import instruction avoids importing the class in the app python file, import
+# which will be removed by Pycharm when optimizing the import !
+#: import AudioPlayPosFields audioplayposfields.AudioPlayPosFields
+#: import FocusTextInput focustextinput.FocusTextInput
+
+<AudioPlayPosFields>: # inherits from AudioPlayPosButtons
+	GridLayout:
+		cols: 1
+		rows: 2
+		size_hint: (0.4, 0.4)
+
+		GridLayout:
+			cols: 3
+			rows: 2
+			size_hint: (0.4, 1)
+			Label:
+				size_hint_y: 0.01
+				valign: 'bottom'
+				text: 'Start'
+			Label:
+				size_hint_y: 0.01
+				valign: 'bottom'
+				text: 'Current'
+			Label:
+				size_hint_y: 0.01
+				valign: 'bottom'
+				text: 'End'
+			FocusTextInput: # required in order for TAB to focus to next FocusTextInput field
+				id: text_input_start
+				size_hint_y: 0.01
+				halign: 'right'
+				multiline: False
+			FocusTextInput: # required in order for TAB to focus to next FocusTextInput field
+				id: text_input_current
+				size_hint_y: 0.01
+				halign: 'right'
+				multiline: False
+				on_text_validate: root.goToSourceFileCurrentPos()
+			FocusTextInput: # required in order for TAB to focus to next FocusTextInput field
+				id: text_input_end
+				size_hint_y: 0.01
+				halign: 'right'
+				multiline: False
+		AudioPlayPosButtons:
