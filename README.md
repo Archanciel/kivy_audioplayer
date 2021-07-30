@@ -6,3 +6,4 @@ MP3 audio player Kivy interface application. This project has two purposes:
 
 ## Required libraries
 - kivy 2.0
+- ffpyplayer 4.3.2 (if not installed, kivy SoundLoader seek() not working !)

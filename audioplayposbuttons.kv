@@ -1,9 +1,13 @@
 # ---------- audioplayposbuttons.kv  ----------
 
 
+# Next import instruction avoids importing the class in the app python file, import
+# which will be removed by Pycharm when optimizing the import !
 #: import AudioPlayPosButtons audioplayposbuttons.AudioPlayPosButtons
 
 <AudioPlayPosButtons>: # inherits from GridLayout
+	sharedFilePlayButton: button_play_sound_file
+
 	cols: 1
 	rows: 1
     GridLayout:
@@ -37,7 +41,7 @@
                             text: '<'
                             on_press: root.backwardSharedFileTenSeconds()
                         Button:
-                            id: button_play_shared_file
+                            id: button_play_sound_file
                             text: 'Play'
                             on_press: root.playSharedFile()
                     GridLayout:
