@@ -15,7 +15,8 @@ class AudioPlayPosFieldsMainApp(App):
 		# if #: import AudioPlayPosFields audioplayposbuttons.AudioPlayPosFields
 		# is in audioplayposbuttons.kv file !
 		Builder.load_file('audioplayposfields.kv')
-		
+		Builder.load_file('audioplayposfieldsmain.kv')
+
 		soundFilePathName = r"D:\Users\Jean-Pierre\Downloads\Audiobooks\mental_versus_conscience\#39 Comment équilibrer notre Mental et notre Conscience .mp3"
 		audioGUI = AudioPlayPosFieldsGUI()
 		audioGUI.setSoundFile(soundFilePathName)

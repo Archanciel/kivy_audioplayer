@@ -6,8 +6,10 @@
 #: import AudioPlayPosFields audioplayposfields.AudioPlayPosFields
 #: import FocusTextInput focustextinput.FocusTextInput
 
-<AudioPlayPosFields>: # inherits from AudioPlayPosButtons
-	cols: 1
+<AudioPlayPosFields>: # inherits from BoxLayout
+    audioPlayPosButtons: audio_play_pos_buttons
+    textInputStart: text_input_start
+	orientation: 'vertical'
 	GridLayout:
 		cols: 1
 		rows: 3
@@ -53,3 +55,4 @@
 			cols: 1
             size_hint: (0.4, None)
     		AudioPlayPosButtons:
+    		    id: audio_play_pos_buttons

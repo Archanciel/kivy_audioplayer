@@ -1,11 +1,12 @@
 from kivy.app import App
 from kivy.core.audio import SoundLoader
 from kivy.lang import Builder
+from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
 from kivy.clock import Clock
 
 
-class AudioPlayPosButtons(GridLayout):
+class AudioPlayPosButtons(BoxLayout):
 	def __init__(self, **kw):
 		super().__init__(**kw)
 
@@ -34,7 +35,6 @@ class AudioPlayPosButtons(GridLayout):
 		
 		self.sharedAudioFilePathNameInitValue = soundFilePathName
 		self.soundloaderSharedMp3Obj = SoundLoader.load(soundFilePathName)
-		print(self.soundloaderSharedMp3Obj)
 	
 	def playSharedFile(self):
 		"""
